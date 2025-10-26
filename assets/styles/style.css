@@ -1,3 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+
 * {
-    background-color: rgb(0, 35, 65);
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: #fff;
+  background: #0b1620;
+}
+
+/* Header */
+.site-header {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin: 0 10%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  max-height: 70px;
+  width: auto;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.main-nav a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-nav ul > li:last-child a {
+  color: #222F33;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-ghost {
+
+color: #222F33;
+background-color: rgb(255, 255, 255);
+padding: 10px 18px;
+}
+.btn-primary {
+  background: #ffffff;
+  color: #222;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Menu toggle (hamburger) */
+.menu-toggle{display:none;background:none;border:0;padding:0;cursor:pointer}
+.menu-toggle img{display:block;height:34px;width:auto}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  position: absolute;
+  right: 50px;
+  inset: 0;
+  height: 100vh;
+  background-image: url("/assets/img/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Filtro azul sobre la imagen */
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 13, 37, 0.411);
+  pointer-events: none;
+}
+
+.hero-inner {
+  z-index: 2;
+  padding: 80px 24px;
+  width: 100%;
+  margin: 10%;
+}
+.eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+.hero-title {
+  font-size: 4rem;
+  line-height: 0.95;
+  margin: 0 0 16px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.hero-sub {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 0 16px;
+    margin: 0 5%;
+  }
+  .main-nav ul {
+    gap: 12px;
+    font-size: 14px;
+  }
+  /* hide full nav on mobile, show hamburger */
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+
+  /* when nav has .active (toggled), show as vertical dropdown */
+  .main-nav.active{display:flex;flex-direction:column;position:absolute;right:10%;top:70px;background:rgba(11,22,30,0.92);padding:12px;border-radius:8px;gap:10px}
+  .main-nav.active ul{display:flex;flex-direction:column;gap:10px}
+  .main-nav.active a{color:#fff}
+  .hero-inner {
+    padding: 48px 16px;
+    margin:10% 5%;
+  }
+  .hero-sub.eyebrow {
+    font-size: 12px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 9vw, 48px);
+    line-height: 1.2;
+  }
+  .btn-primary {
+    padding: 8px 8px;
+    
+
+  }
+  /* smaller logo on mobile */
+  .logo img {
+    height: 40px;
+    max-height: 44px;
+  }
+
+
+/* Utilities */
+html {
+  scroll-behavior: smooth;
+}
+a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.2);
+  outline-offset: 2px;
+}
+
 }
