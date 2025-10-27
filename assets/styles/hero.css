@@ -86,11 +86,22 @@ body {
   padding: 0;
   cursor: pointer;
 }
+
+.menu-toggle.active {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
 .menu-toggle img {
   display: block;
   height: 34px;
   width: auto;
 }
+
+/* utility class used by JS to hide the burger while the menu is open */
+.menu-toggle.hidden { display: none !important; }
 
 /* hide nav close by default (desktop) */
 .main-nav .nav-close {

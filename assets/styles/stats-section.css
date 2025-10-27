@@ -29,7 +29,7 @@
     margin: 0;
     font-weight: 800;
     line-height: 1.03;
-    font-size: clamp(28px, 5.6vw, 44px);
+    font-size: 42px;
     letter-spacing: -0.02em;
 }
 
@@ -69,6 +69,7 @@
         text-align: center;
     }
     .stats-right {
+        flex-wrap: wrap;
         justify-content: center;
     }
     .stat {

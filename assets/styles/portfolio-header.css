@@ -1,0 +1,176 @@
+/* Scoped header styles for the portfolio page only
+   These rules target .portfolio-header to avoid changing the global header styles
+*/
+.portfolio-header {
+  background: transparent;
+  padding: 14px 16px;
+  position: relative;
+  z-index: 1200;
+  margin: 0 10%;
+}
+
+.portfolio-header .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, menu right */
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  max-height: 70px;
+  width: auto;
+}
+/* Menu toggle button styling (keeps the same structure but different visual) */
+.portfolio-header .menu-toggle {
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.portfolio-header .menu-toggle img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+/* Off-canvas nav specific for portfolio page */
+.portfolio-header .main-nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* hidden by default (offscreen) */
+  width: 320px;
+  max-width: 85%;
+  height: 100%;
+   background: linear-gradient(
+      180deg,
+      rgba(11, 22, 30, 0.98),
+      rgba(8, 14, 20, 0.98)
+    );
+  box-shadow: -8px 0 40px rgba(11, 22, 28, 0.16);
+  padding: 28px 20px;
+  transition: right 0.28s ease, box-shadow 0.28s ease;
+  z-index: 1300;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+.portfolio-header .main-nav.active {
+  right: 0;
+
+}
+
+.portfolio-header .nav-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.portfolio-header .main-nav ul {
+  list-style: none;
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.portfolio-header .main-nav a {
+  color: #ffffff; /* dark on white panel */
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 10px 6px;
+  font-size: 18px;
+}
+.portfolio-header .main-nav a:hover { color: var(--accent); }
+.portfolio-header .main-nav .btn-ghost {
+  display: inline-block;
+}
+
+
+/* backdrop for the side panel */
+.portfolio-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .28s ease;
+  z-index: 1250;
+}
+.portfolio-nav-backdrop.visible { opacity: 1; visibility: visible; }
+
+/* prevent body scrolling when nav open */
+body.nav-open { overflow: hidden; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-ghost {
+  color: #222f33;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 18px;
+}
+
+/* Desktop: show nav inline and reset off-canvas */
+@media (min-width: 900px) {
+  .portfolio-header .main-nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: block;
+    transform: none;
+  }
+
+  .portfolio-header .main-nav ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+  .portfolio-header .nav-close {
+    display: none;
+  }
+  .portfolio-header .menu-toggle {
+    display: none;
+  }
+  .portfolio-header .main-nav ul {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+/* Small screens: ensure nav scroll looks native */
+@media (max-width: 420px) {
+  .portfolio-header .main-nav {
+    width: 85%;
+    right: -85%;
+  }
+  .portfolio-header .menu-toggle img {
+    height: 26px;
+  }
+
+
+}

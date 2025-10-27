@@ -2,12 +2,32 @@ console.log("Bienvenido a Muebles Jazmin");
 
 // Menú móvil
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".main-nav");
-  const closeBtn = document.querySelector(".nav-close");
+  const toggles = document.querySelectorAll(".menu-toggle");
+  const closeBtns = document.querySelectorAll(".nav-close");
 
-  if (toggle) toggle.addEventListener("click", () => nav.classList.add("active"));
-  if (closeBtn) closeBtn.addEventListener("click", () => nav.classList.remove("active"));
+  // When a hamburger is clicked, open the corresponding nav and hide that hamburger
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+      const header = toggle.closest('.site-header');
+      const nav = header ? header.querySelector('.main-nav') : document.querySelector('.main-nav');
+      if (!nav) return;
+      nav.classList.add('active');
+      // hide this toggle while menu is open
+      toggle.classList.add('hidden');
+    });
+  });
+
+  // When a close button is clicked, close the nav and restore the hamburger
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const header = btn.closest('.site-header');
+      const nav = header ? header.querySelector('.main-nav') : document.querySelector('.main-nav');
+      if (!nav) return;
+      nav.classList.remove('active');
+      const toggle = header ? header.querySelector('.menu-toggle') : document.querySelector('.menu-toggle');
+      if (toggle) toggle.classList.remove('hidden');
+    });
+  });
 });
 
 // Carrusel infinito
