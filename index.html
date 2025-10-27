@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebles Jazmin</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/hero.css">
+    <link rel="stylesheet" href="assets/styles/carrusel.css">
+    <link rel="stylesheet" href="assets/styles/stats-section.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
 </head>
 <body>
     <header class="site-header">
@@ -26,7 +29,7 @@
         </div>
     </header>
 
-    <section class="hero" style="background-image: url('assets/images/hero.jpg')">
+    <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-inner">
             <p class="eyebrow">Diseños exclusivos, creados a la medida</p>
@@ -35,7 +38,95 @@
             <a class="btn btn-primary" href="#contact">Contacto</a>
         </div>
     </section>
+    <!-- Stats section (captura) -->
+    <section class="stats-section" aria-label="Transformamos tus espacios" style="--stats-bg: url('file:///C:/Users/Administrador/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/{A42D0BC9-FA50-40FC-AFB5-036E9AB4E17E}.png')">
+        <div class="stats-container">
+            <div class="stats-left">
+                <h2 class="stats-title">Transformamos<br>tus espacios por<br>completo</h2>
+            </div>
+            <div class="stats-right" role="list">
+                <div class="stat" role="listitem">
+                    <div class="stat-number">+20</div>
+                    <div class="stat-label">años de experiencia</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">proyecto entregados</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">clientes satisfechos</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">de garantía en todos nuestros trabajos</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Carousel section -->
+       <section class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1567016432779-094069958ea5')">
+                <button class="carousel-btn prev" aria-label="Anterior">
+                    <img src="assets/img/atras.svg" alt="anterior">
+                </button>
+                <button class="carousel-btn next" aria-label="Siguiente">
+                    <img src="assets/img/adelante.svg" alt="siguiente">
+                </button>
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7')">
+                <button class="carousel-btn prev" aria-label="Anterior">
+                    <img src="assets/img/atras.svg" alt="anterior">
+                </button>
+                <button class="carousel-btn next" aria-label="Siguiente">
+                    <img src="assets/img/adelante.svg" alt="siguiente">
+                </button>
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1540574163026-643ea20ade25')">
+                <button class="carousel-btn prev" aria-label="Anterior">
+                    <img src="assets/img/atras.svg" alt="anterior">
+                </button>
+                <button class="carousel-btn next" aria-label="Siguiente">
+                    <img src="assets/img/adelante.svg" alt="siguiente">
+                </button>
+            </div>
+        </div>
+        
+        <div class="carousel-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+        </div>
+    </section> 
+    <section></section>
+
+    <!-- Footer (captura) -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-item">
+                    <div class="small-label">Estamos ubicados</div>
+                    <div class="footer-text">Dirección</div>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <a class="footer-logo" href="#" aria-label="Muebles Jazmín">
+                    <img src="assets/img/logo.png" alt="Muebles Jazmín">
+                </a>
+                <div class="copyright">© 2025 Muebles Jazmín</div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-item">
+                    <div class="small-label">Contáctanos</div>
+                    <div class="footer-text">+57 3142018144</div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
