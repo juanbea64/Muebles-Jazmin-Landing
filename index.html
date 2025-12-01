@@ -12,23 +12,23 @@
     <link rel="stylesheet" href="assets/styles/transform.css">
     <link rel="stylesheet" href="assets/styles/materials.css">
     <link rel="stylesheet" href="assets/styles/procedure-section.css">
-    
+    <link rel="stylesheet" href="assets/styles/animations.css">
 </head>
 
 <body>
     <header class="site-header">
         <div class=" header-inner">
-            <a class="logo" href="#"><img src="assets/img/logo.png" alt="Muebles Jazmin"></a>
-            <!-- botón hamburguesa (visible en pantallas chiquitas) -->
+            <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Muebles Jazmin"></a>
+            <!-- botón hamburguesa (visible en pantallas pequeñas) -->
             <button class="menu-toggle" aria-label="Abrir menú">
                 <img src="assets/img/burger.png" alt="menu">
             </button>
             <nav class="main-nav" aria-hidden="true">
                 <button class="nav-close" aria-label="Cerrar menú">×</button>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="portafolio.html">Portafolio</a></li>
-                    <li><a href="#">Materiales</a></li>
+                    <li><a href="materiales.html">Materiales</a></li>
                     <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -41,7 +41,7 @@
             <p class="eyebrow">Diseños exclusivos, creados a la medida</p>
             <h1 class="hero-title">No Fabricamos En Serie,<br>Creamos Experiencias<br>Personalizadas</h1>
             <p class="hero-sub">Muebles hechos a medida con materiales seleccionados y acabados premium.</p>
-            <a class="btn btn-primary" href="#contact">Contacto</a>
+            <a class="btn btn-primary" href="contacto.html">Contacto</a>
         </div>
     </section>
 
@@ -49,7 +49,7 @@
         <div class="transform-container">
 
             <!-- Texto izquierda -->
-            <div class="transform-text">
+            <div class="transform-text animate-on-scroll fade-left">
                 <h2>Transformamos tus<br>espacios por completo</h2>
                 <p>
                     Hacemos posible un cambio real en tus ambientes, pasando de lo común a lo sofisticado.
@@ -64,7 +64,7 @@
             </div>
 
             <!-- Before/After Slider -->
-            <div class="ba-wrapper">
+            <div class="ba-wrapper animate-on-scroll fade-right">
                 <div class="ba-container">
                     <img src="assets/img/antes1.jpg" class="ba-img before">
                     <img src="assets/img/despues1.jpg" class="ba-img after">
@@ -139,31 +139,31 @@
     </section>
 
     <section class="materiales">
-        <h2>Materiales de Fabricación</h2>
+        <h2 class="animate-on-scroll fade-up">Materiales de Fabricación</h2>
     
         <div class="materiales-grid">
-            <div class="material-item">
+            <div class="material-item animate-on-scroll fade-up delay-1">
                 <div class="icon-circle">
                     <img src="assets/img/triplex.png" alt="Triplex">
                 </div>
                 <p>Triplex</p>
             </div>
     
-            <div class="material-item">
+            <div class="material-item animate-on-scroll fade-up delay-2">
                 <div class="icon-circle">
                     <img src="assets/img/MDF-Melamina.png" alt="MDF / Melamina">
                 </div>
                 <p>MDF / MELAMINA</p>
             </div>
     
-            <div class="material-item">
+            <div class="material-item animate-on-scroll fade-up delay-3">
                 <div class="icon-circle">
                     <img src="assets/img/MDF-crudo.png" alt="MDF Crudo">
                 </div>
                 <p>MDF CRUDO</p>
             </div>
     
-            <div class="material-item">
+            <div class="material-item animate-on-scroll fade-up delay-4">
                 <div class="icon-circle">
                     <img src="assets/img/herrajes.png" alt="Herrajes">
                 </div>
@@ -176,23 +176,23 @@
     <section class="stats-section" aria-label="Transformamos tus espacios"
         style="--stats-bg: url('file:///C:/Users/Administrador/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/{A42D0BC9-FA50-40FC-AFB5-036E9AB4E17E}.png')">
         <div class="stats-container">
-            <div class="stats-left">
+            <div class="stats-left animate-on-scroll fade-left">
                 <h2 class="stats-title">Transformamos<br>tus espacios por<br>completo</h2>
             </div>
             <div class="stats-right" role="list">
-                <div class="stat" role="listitem">
+                <div class="stat animate-on-scroll fade-up delay-1" role="listitem">
                     <div class="stat-number">+20</div>
                     <div class="stat-label">años de experiencia</div>
                 </div>
-                <div class="stat" role="listitem">
+                <div class="stat animate-on-scroll fade-up delay-2" role="listitem">
                     <div class="stat-number">+500</div>
                     <div class="stat-label">proyecto entregados</div>
                 </div>
-                <div class="stat" role="listitem">
+                <div class="stat animate-on-scroll fade-up delay-3" role="listitem">
                     <div class="stat-number">95%</div>
                     <div class="stat-label">clientes satisfechos</div>
                 </div>
-                <div class="stat" role="listitem">
+                <div class="stat animate-on-scroll fade-up delay-4" role="listitem">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">de garantía en todos nuestros trabajos</div>
                 </div>
@@ -201,10 +201,10 @@
     </section>
 
     <section class="procedure-selection">
-        <h2 class="procedure-title">Nuestro procedimiento</h2>
+        <h2 class="procedure-title animate-on-scroll fade-up">Nuestro procedimiento</h2>
 
         <div class="procedure-container">
-            <div class="step">
+            <div class="step animate-on-scroll fade-up delay-1">
                 <div class="shape-wrapper triangle">
                     <div class="shape-back"></div>
                     <div class="shape-front">
@@ -218,7 +218,7 @@
         
             <div class="separator"></div>
         
-            <div class="step">
+            <div class="step animate-on-scroll fade-up delay-2">
                 <div class="shape-wrapper circle">
                     <div class="shape-back"></div>
                     <div class="shape-front">
@@ -232,7 +232,7 @@
         
             <div class="separator"></div>
         
-            <div class="step">
+            <div class="step animate-on-scroll fade-up delay-3">
                 <div class="shape-wrapper square">
                     <div class="shape-back"></div>
                     <div class="shape-front">
@@ -257,7 +257,7 @@
             </div>
 
             <div class="footer-center">
-                <a class="footer-logo" href="#" aria-label="Muebles Jazmín">
+                <a class="footer-logo" href="index.html" aria-label="Muebles Jazmín">
                     <img src="assets/img/logo.png" alt="Muebles Jazmín">
                 </a>
                 <div class="copyright">© 2025 Muebles Jazmín</div>
@@ -272,6 +272,7 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>

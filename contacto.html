@@ -23,7 +23,7 @@
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="portafolio.html">Portafolio</a></li>
-          <li><a href="#">Materiales</a></li>
+          <li><a href="materiales.html">Materiales</a></li>
           <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -44,19 +44,19 @@
     
             <form id="contactForm" class="contact-form">
     
-                <label>Nombre completo</label>
-                <input type="text" id="nombre" required>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
     
-                <label>Email</label>
-                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
     
-                <label>Número de contacto</label>
-                <input type="text" id="telefono" required>
+                <label for="telefono">Número de contacto</label>
+                <input type="tel" id="telefono" name="telefono" required>
     
-                <label>Mensaje</label>
-                <textarea id="mensaje" rows="5" required></textarea>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
     
-                <a onclick="enviar()" id="btnEnviar" class="btn-enviar" href = "">Enviar por WhatsApp</a>
+                <button type="submit" id="btnEnviar" class="btn-enviar">Enviar por WhatsApp</button>
             </form>
     
         </div>
