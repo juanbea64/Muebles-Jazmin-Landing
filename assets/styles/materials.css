@@ -1,0 +1,65 @@
+.materiales {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.materiales h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #222;
+    font-weight: 800;
+}
+
+/* GRID RESPONSIVE */
+.materiales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Cada ítem */
+.material-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Círculo */
+.icon-circle {
+    width: 130px;
+    height: 130px;
+    background: #0c2738; /* Azul oscuro */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon-circle img {
+    width: 70%;
+    height: auto;
+}
+
+/* Texto */
+.material-item p {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .material-item p {
+        font-size: 0.9rem;
+    }
+}

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/styles/portfolio.css">
   <link rel="stylesheet" href="assets/styles/portfolio-header.css">
   <link rel="stylesheet" href="assets/styles/footer.css">
+  <link rel="stylesheet" href="assets/styles/contacto.css">
 </head>
 <body>
   <header class="portfolio-header">
@@ -21,9 +22,9 @@
         <button class="nav-close" aria-label="Cerrar menú">×</button>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
           <li><a href="#">Materiales</a></li>
-          <li><a class="btn btn-ghost" href="#contact">Contacto</a></li>
+          <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -31,52 +32,36 @@
 
   <main>
     <section class="portfolio-hero">
-      <div class="container">
-        <p class="eyebrow">Desktop & mobile</p>
-        <h1 class="title">Descarga nuestro portafolio</h1>
-        <p class="subtitle">Conoce nuestros proyectos más destacados en diseño y fabricación de muebles a medida.
-Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.</p>
-        <a class="btn btn-primary" href="#projects">📥 Descargar Portafolio (PDF)</a>
-      </div>
+        <div class="container">
+            <h1 class="title">Contáctanos</h1>
+            <p class="subtitle">¿Tienes una idea, un proyecto o una consulta?.
+                Estamos aquí para ayudarte a crear el mueble perfecto para tu espacio.</p>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="contact-container">
+    
+            <form id="contactForm" class="contact-form">
+    
+                <label>Nombre completo</label>
+                <input type="text" id="nombre" required>
+    
+                <label>Email</label>
+                <input type="email" id="email" required>
+    
+                <label>Número de contacto</label>
+                <input type="text" id="telefono" required>
+    
+                <label>Mensaje</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+    
+                <a onclick="enviar()" id="btnEnviar" class="btn-enviar" href = "">Enviar por WhatsApp</a>
+            </form>
+    
+        </div>
     </section>
 
-    <section id="projects" class="projects-grid">
-      <div class="container grid">
-        <!-- use the local images as project thumbs -->
-        <article class="project">
-          <img src="assets/img/img1.jpeg" alt="Proyecto 1">
-          <h3>Proyecto 1</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img2.jpeg" alt="Proyecto 2">
-          <h3>Proyecto 2</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img3.jpeg" alt="Proyecto 3">
-          <h3>Proyecto 3</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img4.jpeg" alt="Proyecto 4">
-          <h3>Proyecto 4</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img5.jpeg" alt="Proyecto 5">
-          <h3>Proyecto 5</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img6.jpeg" alt="Proyecto 6">
-          <h3>Proyecto 6</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img7.jpeg" alt="Proyecto 7">
-          <h3>Proyecto 7</h3>
-        </article>
-        <article class="project">
-          <img src="assets/img/img8.jpeg" alt="Proyecto 8">
-          <h3>Proyecto 8</h3>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -104,6 +89,6 @@ Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.
     </div>
   </footer>
 </footer>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>

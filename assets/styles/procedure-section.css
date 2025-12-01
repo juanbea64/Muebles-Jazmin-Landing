@@ -1,0 +1,120 @@
+.procedure-selection {
+    text-align: center;
+    background: #ffffff;
+    color: #263238;
+    padding: 40px 20px;
+}
+
+.procedure-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #ffffff;
+    color: #263238;
+}
+
+.procedure-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.step {
+    max-width: 300px;
+}
+
+.shape-wrapper {
+    position: relative;
+    width: 156px;
+    height: 138px;
+    margin: 0 auto 35px auto;
+}
+
+.shape-back,
+.shape-front {
+    position: absolute;
+    inset: 0;
+}
+
+/* --- FIGURA DORADA DE ATRÁS --- */
+.shape-back {
+    background: #d9c2a3;
+}
+
+/* --- FIGURA OSCURA DE ADELANTE (MISMO TAMAÑO) --- */
+.shape-front {
+    position: absolute;
+    background: #07131C;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    transform: translate(20px, 20px); /* diagonal */
+}
+
+.icon-triangle2 {
+    width: 65px;
+    height: 75px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    pointer-events: none;
+}
+
+.icon-circle2 {
+    width: 105px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background: #07131C;
+}
+
+.icon-square2 {
+    width: 90px;
+    height: 90px;
+}
+
+/* ============== FORMAS ============== */
+
+/* Triángulo */
+.triangle .shape-back,
+.triangle .shape-front {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Círculo */
+.circle .shape-back,
+.circle .shape-front {
+    border-radius: 50%;
+}
+
+/* Cuadrado */
+.square .shape-back,
+.square .shape-front {
+    border-radius: 4px;
+}
+
+.separator {
+    width: 103px;
+    height: 4px;
+    background: #d9c2a3;
+    border-radius: 20px;
+    margin: 0 8px;
+    align-self: center;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .shape-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+
+    .shape-front img {
+        width: 45px;
+        height: 45px;
+    }
+}

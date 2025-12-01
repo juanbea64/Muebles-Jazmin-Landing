@@ -1,0 +1,40 @@
+.contact-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    padding: 14px;
+    border: none;
+    background: #07131C;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #0f2739;
+}
