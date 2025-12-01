@@ -1,18 +1,6 @@
 .transform-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #ffffff;
-    position: relative;
-    overflow: hidden;
-}
-
-.transform-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.3), transparent);
 }
 
 .transform-container {
@@ -20,7 +8,7 @@
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -32,57 +20,25 @@
 }
 
 .transform-text h2 {
-    font-size: clamp(32px, 5vw, 52px);
+    font-size: clamp(28px, 4vw, 48px);
     font-weight: 800;
-    margin-bottom: 25px;
-    position: relative;
-    line-height: 1.1;
-}
-
-.transform-text h2::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #c9a227 0%, #e8d48a 100%);
-    border-radius: 2px;
+    margin-bottom: 15px;
 }
 
 .transform-text p {
-    line-height: 1.7;
-    opacity: 0.85;
-    font-size: 1.05rem;
-    margin-top: 20px;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
 /* ============= BEFORE / AFTER WRAPPER ============= */
 .ba-wrapper {
     flex: 1 1 300px;
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     aspect-ratio: 3 / 4;
-    border-radius: 20px;
+    border-radius: 14px;
     overflow: hidden;
     background: #000;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
-    position: relative;
-}
-
-.ba-wrapper::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 23px;
-    background: linear-gradient(135deg, #c9a227 0%, #e8d48a 50%, #c9a227 100%);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.ba-wrapper:hover::before {
-    opacity: 1;
 }
 
 /* Container que controla el slider */
@@ -91,8 +47,6 @@
     width: 100%;
     height: 100%;
     cursor: grab;
-    border-radius: 20px;
-    overflow: hidden;
 }
 
 /* Imágenes */
@@ -121,11 +75,10 @@
     bottom: 0;
     left: 50%;
     width: 4px;
-    background: linear-gradient(180deg, #c9a227 0%, #e8d48a 100%);
+    background: white;
     border: 2px solid #ffffff;
     border-radius: 10px;
     z-index: 20;
-    box-shadow: 0 0 15px rgba(201, 162, 39, 0.5);
 }
 
 /* Círculo del centro */
@@ -134,14 +87,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #c9a227 0%, #e8d48a 100%);
+    width: 40px;      /* tamaño del círculo */
+    height: 40px;
+    background: white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 21;
-    box-shadow: 0 5px 20px rgba(201, 162, 39, 0.4);
-    border: 3px solid #fff;
 }
 
 /* Íconos SVG en el centro */
@@ -150,13 +101,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 30px;
-    height: 30px;
+    width: 26px;   /* tamaño de ambos íconos */
+    height: 26px;
     transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
     z-index: 22;
+
+    /* Combinamos los dos iconos: uno a la izquierda y otro a la derecha */
     background-image: 
         url("../img/atras.svg"), 
         url("../img/adelante.svg");
@@ -164,33 +117,23 @@
         left center,
         right center;
     background-size:
-        14px,
-        14px;
-    filter: brightness(0) invert(1);
+        12px,
+        12px;
 }
 
 /* ============= RESPONSIVE ============= */
 @media (max-width: 768px) {
-    .transform-section {
-        padding: 70px 0;
-    }
-
     .transform-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 35px;
     }
 
     .ba-wrapper {
         max-width: 100%;
-        aspect-ratio: 4/5;
+        aspect-ratio: 4/5; /* más alto para móvil */
     }
 
     .transform-text {
         text-align: center;
-    }
-
-    .transform-text h2::after {
-        left: 50%;
-        transform: translateX(-50%);
     }
 }

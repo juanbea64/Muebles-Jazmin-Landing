@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/styles/portfolio.css">
   <link rel="stylesheet" href="assets/styles/portfolio-header.css">
   <link rel="stylesheet" href="assets/styles/footer.css">
+  <link rel="stylesheet" href="assets/styles/modal-carousel.css">
 </head>
 <body>
   <header class="portfolio-header">
@@ -21,9 +22,9 @@
         <button class="nav-close" aria-label="Cerrar menú">×</button>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="portfolio.html">Portafolio</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
           <li><a href="#">Materiales</a></li>
-          <li><a class="btn btn-ghost" href="#contact">Contacto</a></li>
+          <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -35,7 +36,7 @@
         <p class="eyebrow">Desktop & mobile</p>
         <h1 class="title">Descarga nuestro portafolio</h1>
         <p class="subtitle">Conoce nuestros proyectos más destacados en diseño y fabricación de muebles a medida.
-Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.</p>
+          Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.</p>
         <a class="btn btn-primary" href="#projects">📥 Descargar Portafolio (PDF)</a>
       </div>
     </section>
@@ -43,40 +44,62 @@ Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.
     <section id="projects" class="projects-grid">
       <div class="container grid">
         <!-- use the local images as project thumbs -->
-        <article class="project">
+        <article class="project" data-project="1" data-images='["assets/img/img1.jpeg", "assets/img/img2.jpeg", "assets/img/img3.jpeg", "assets/img/img4.jpeg"]'>
           <img src="assets/img/img1.jpeg" alt="Proyecto 1">
           <h3>Proyecto 1</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="2" data-images='["assets/img/img2.jpeg", "assets/img/img5.jpeg", "assets/img/img6.jpeg"]'>
           <img src="assets/img/img2.jpeg" alt="Proyecto 2">
           <h3>Proyecto 2</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="3" data-images='["assets/img/img3.jpeg", "assets/img/img7.jpeg", "assets/img/img8.jpeg", "assets/img/img1.jpeg"]'>
           <img src="assets/img/img3.jpeg" alt="Proyecto 3">
           <h3>Proyecto 3</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="4" data-images='["assets/img/img4.jpeg", "assets/img/img2.jpeg", "assets/img/img6.jpeg"]'>
           <img src="assets/img/img4.jpeg" alt="Proyecto 4">
           <h3>Proyecto 4</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="5" data-images='["assets/img/img5.jpeg", "assets/img/img3.jpeg", "assets/img/img7.jpeg", "assets/img/img1.jpeg"]'>
           <img src="assets/img/img5.jpeg" alt="Proyecto 5">
           <h3>Proyecto 5</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="6" data-images='["assets/img/img6.jpeg", "assets/img/img4.jpeg", "assets/img/img8.jpeg"]'>
           <img src="assets/img/img6.jpeg" alt="Proyecto 6">
           <h3>Proyecto 6</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="7" data-images='["assets/img/img7.jpeg", "assets/img/img5.jpeg", "assets/img/img1.jpeg", "assets/img/img3.jpeg"]'>
           <img src="assets/img/img7.jpeg" alt="Proyecto 7">
           <h3>Proyecto 7</h3>
         </article>
-        <article class="project">
+        <article class="project" data-project="8" data-images='["assets/img/img8.jpeg", "assets/img/img6.jpeg", "assets/img/img2.jpeg", "assets/img/img4.jpeg"]'>
           <img src="assets/img/img8.jpeg" alt="Proyecto 8">
           <h3>Proyecto 8</h3>
         </article>
       </div>
     </section>
+
+    <!-- Modal Carrusel -->
+    <div id="projectModal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <h2 class="modal-title">Proyecto</h2>
+        <div class="modal-carousel">
+          <div class="modal-carousel-track">
+            <!-- Las imágenes se cargan dinámicamente -->
+          </div>
+          <button class="modal-carousel-btn prev" aria-label="Anterior">
+            <img src="assets/img/atras.svg" alt="Anterior">
+          </button>
+          <button class="modal-carousel-btn next" aria-label="Siguiente">
+            <img src="assets/img/adelante.svg" alt="Siguiente">
+          </button>
+        </div>
+        <div class="modal-carousel-dots">
+          <!-- Los dots se generan dinámicamente -->
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -105,5 +128,6 @@ Acabados premium, materiales de calidad y soluciones pensadas para cada espacio.
   </footer>
 </footer>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/modal-carousel.js"></script>
 </body>
 </html>

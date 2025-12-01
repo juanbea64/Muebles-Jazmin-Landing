@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,12 @@
     <link rel="stylesheet" href="assets/styles/carrusel.css">
     <link rel="stylesheet" href="assets/styles/stats-section.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/transform.css">
+    <link rel="stylesheet" href="assets/styles/materials.css">
+    <link rel="stylesheet" href="assets/styles/procedure-section.css">
+    
 </head>
+
 <body>
     <header class="site-header">
         <div class=" header-inner">
@@ -17,15 +23,15 @@
             <button class="menu-toggle" aria-label="Abrir menú">
                 <img src="assets/img/burger.png" alt="menu">
             </button>
-                <nav class="main-nav" aria-hidden="true">
-                    <button class="nav-close" aria-label="Cerrar menú">×</button>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="portfolio.html">Portafolio</a></li>
-                        <li><a href="#">Materiales</a></li>
-                        <li><a class="btn btn-ghost" href="#contact">Contacto</a></li>
-                    </ul>
-                </nav>
+            <nav class="main-nav" aria-hidden="true">
+                <button class="nav-close" aria-label="Cerrar menú">×</button>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="portafolio.html">Portafolio</a></li>
+                    <li><a href="#">Materiales</a></li>
+                    <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -38,30 +44,34 @@
             <a class="btn btn-primary" href="#contact">Contacto</a>
         </div>
     </section>
-    <!-- Stats section (captura) -->
-    <section class="stats-section" aria-label="Transformamos tus espacios" style="--stats-bg: url('file:///C:/Users/Administrador/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/{A42D0BC9-FA50-40FC-AFB5-036E9AB4E17E}.png')">
-        <div class="stats-container">
-            <div class="stats-left">
-                <h2 class="stats-title">Transformamos<br>tus espacios por<br>completo</h2>
+
+    <section class="transform-section">
+        <div class="transform-container">
+
+            <!-- Texto izquierda -->
+            <div class="transform-text">
+                <h2>Transformamos tus<br>espacios por completo</h2>
+                <p>
+                    Hacemos posible un cambio real en tus ambientes, pasando de lo común a lo sofisticado.
+                    Cada transformación es un proceso cuidado en cada detalle, donde la personalización, la
+                    creatividad y la exclusividad se unen para dar vida a un resultado único.
+                </p>
+                <p>
+                    Creemos que cada espacio tiene un antes y un después, y nuestro propósito es llevarlo a su
+                    mejor versión: un lugar que no solo se ve diferente, sino que también se siente distinto,
+                    reflejando tu estilo y creando una experiencia irrepetible.
+                </p>
             </div>
-            <div class="stats-right" role="list">
-                <div class="stat" role="listitem">
-                    <div class="stat-number">+20</div>
-                    <div class="stat-label">años de experiencia</div>
-                </div>
-                <div class="stat" role="listitem">
-                    <div class="stat-number">+500</div>
-                    <div class="stat-label">proyecto entregados</div>
-                </div>
-                <div class="stat" role="listitem">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">clientes satisfechos</div>
-                </div>
-                <div class="stat" role="listitem">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">de garantía en todos nuestros trabajos</div>
+
+            <!-- Before/After Slider -->
+            <div class="ba-wrapper">
+                <div class="ba-container">
+                    <img src="assets/img/antes1.jpg" class="ba-img before">
+                    <img src="assets/img/despues1.jpg" class="ba-img after">
+                    <div class="ba-handle"></div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -127,7 +137,114 @@
             <button class="dot" data-slide="5"></button>
         </div>
     </section>
-    <section></section>
+
+    <section class="materiales">
+        <h2>Materiales de Fabricación</h2>
+    
+        <div class="materiales-grid">
+            <div class="material-item">
+                <div class="icon-circle">
+                    <img src="assets/img/triplex.png" alt="Triplex">
+                </div>
+                <p>Triplex</p>
+            </div>
+    
+            <div class="material-item">
+                <div class="icon-circle">
+                    <img src="assets/img/MDF-Melamina.png" alt="MDF / Melamina">
+                </div>
+                <p>MDF / MELAMINA</p>
+            </div>
+    
+            <div class="material-item">
+                <div class="icon-circle">
+                    <img src="assets/img/MDF-crudo.png" alt="MDF Crudo">
+                </div>
+                <p>MDF CRUDO</p>
+            </div>
+    
+            <div class="material-item">
+                <div class="icon-circle">
+                    <img src="assets/img/herrajes.png" alt="Herrajes">
+                </div>
+                <p>Herrajes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats section (captura) -->
+    <section class="stats-section" aria-label="Transformamos tus espacios"
+        style="--stats-bg: url('file:///C:/Users/Administrador/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/{A42D0BC9-FA50-40FC-AFB5-036E9AB4E17E}.png')">
+        <div class="stats-container">
+            <div class="stats-left">
+                <h2 class="stats-title">Transformamos<br>tus espacios por<br>completo</h2>
+            </div>
+            <div class="stats-right" role="list">
+                <div class="stat" role="listitem">
+                    <div class="stat-number">+20</div>
+                    <div class="stat-label">años de experiencia</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">proyecto entregados</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">clientes satisfechos</div>
+                </div>
+                <div class="stat" role="listitem">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">de garantía en todos nuestros trabajos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="procedure-selection">
+        <h2 class="procedure-title">Nuestro procedimiento</h2>
+
+        <div class="procedure-container">
+            <div class="step">
+                <div class="shape-wrapper triangle">
+                    <div class="shape-back"></div>
+                    <div class="shape-front">
+                        <img src="assets/img/tabla.png" class="icon-triangle2" alt="">
+                    </div>
+                </div>
+                <h3>Diseño y Personalización</h3>
+                <p>Creamos muebles únicos adaptados a tus espacios y necesidades. Nuestro equipo diseña con atención al detalle,
+                    buscando siempre la combinación perfecta entre funcionalidad, estilo y comodidad.</p>
+            </div>
+        
+            <div class="separator"></div>
+        
+            <div class="step">
+                <div class="shape-wrapper circle">
+                    <div class="shape-back"></div>
+                    <div class="shape-front">
+                        <img src="assets/img/icon2.png" class="icon-circle2" alt="">
+                    </div>
+                </div>
+                <h3>Fabricación e Instalación</h3>
+                <p>Trabajamos con materiales de alta calidad y técnicas modernas para asegurar la durabilidad de cada mueble.
+                    Además, nos encargamos de la instalación para que recibas un producto listo para usar.</p>
+            </div>
+        
+            <div class="separator"></div>
+        
+            <div class="step">
+                <div class="shape-wrapper square">
+                    <div class="shape-back"></div>
+                    <div class="shape-front">
+                        <img src="assets/img/engranaje.png" class="icon-square2" alt="">
+                    </div>
+                </div>
+                <h3>Servicio y Garantía</h3>
+                <p>No solo entregamos muebles, entregamos confianza. Brindamos soporte, mantenimiento y asesoría para garantizar
+                    que cada pieza conserve su belleza y funcionalidad con el paso del tiempo.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer (captura) -->
     <footer class="site-footer" role="contentinfo">
@@ -156,4 +273,5 @@
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

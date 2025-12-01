@@ -63,3 +63,32 @@ dots.forEach((dot, i) => {
 
 // Auto-play cada 5 segundos
 setInterval(() => showSlide(current + 1), 5000);
+
+const container = document.querySelector(".ba-container");
+const afterImg = document.querySelector(".ba-img.after");
+const handle = document.querySelector(".ba-handle");
+
+container.addEventListener("mousemove", function (e) {
+    let rect = container.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+
+    x = Math.max(0, Math.min(x, rect.width)); // límites
+
+    let percent = (x / rect.width) * 100;
+
+    handle.style.left = percent + "%";
+    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+});
+
+container.addEventListener("touchmove", function (e) {
+    let touch = e.touches[0];
+    let rect = container.getBoundingClientRect();
+    let x = touch.clientX - rect.left;
+
+    x = Math.max(0, Math.min(x, rect.width));
+
+    let percent = (x / rect.width) * 100;
+
+    handle.style.left = percent + "%";
+    afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+});
