@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio - Muebles Jazmín</title>
+  <link rel="stylesheet" href="assets/styles/hero.css">
+  <link rel="stylesheet" href="assets/styles/portfolio.css">
+  <link rel="stylesheet" href="assets/styles/portfolio-header.css">
+  <link rel="stylesheet" href="assets/styles/footer.css">
+  <link rel="stylesheet" href="assets/styles/contacto.css">
+</head>
+<body>
+  <header class="portfolio-header">
+    <div class=" header-inner">
+      <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Muebles Jazmin"></a>
+      <!-- botón hamburguesa (visible en pantallas pequeñas) -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <img src="assets/img/burger.png" alt="menu">
+      </button>
+      <nav class="main-nav" aria-hidden="true">
+        <button class="nav-close" aria-label="Cerrar menú">×</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="materiales.html">Materiales</a></li>
+          <li><a class="btn btn-ghost" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1 class="title">Contáctanos</h1>
+            <p class="subtitle">¿Tienes una idea, un proyecto o una consulta?.
+                Estamos aquí para ayudarte a crear el mueble perfecto para tu espacio.</p>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="contact-container">
+    
+            <form id="contactForm" class="contact-form">
+    
+                <label>Nombre completo</label>
+                <input type="text" id="nombre" required>
+    
+                <label>Email</label>
+                <input type="email" id="email" required>
+    
+                <label>Número de contacto</label>
+                <input type="text" id="telefono" required>
+    
+                <label>Mensaje</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+    
+                <a onclick="enviar()" id="btnEnviar" class="btn-enviar" href = "">Enviar por WhatsApp</a>
+            </form>
+    
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-item">
+          <div class="small-label">Estamos ubicados</div>
+          <div class="footer-text">Dirección</div>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <a class="footer-logo" href="index.html" aria-label="Muebles Jazmín">
+          <img src="assets/img/logo.png" alt="Muebles Jazmín">
+        </a>
+        <div class="copyright">© 2025 Muebles Jazmín</div>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-item">
+          <div class="small-label">Contáctanos</div>
+          <div class="footer-text">+57 3142018144</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</footer>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

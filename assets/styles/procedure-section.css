@@ -1,0 +1,225 @@
+.procedure-selection {
+    text-align: center;
+    background: #ffffff;
+    color: #263238;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.procedure-selection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.3), transparent);
+}
+
+.procedure-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    background: #ffffff;
+    color: #263238;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.procedure-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.step {
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.step:hover {
+    background: rgba(201, 162, 39, 0.05);
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.step:hover h3 {
+    color: #c9a227;
+}
+
+.step p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.shape-wrapper {
+    position: relative;
+    width: 156px;
+    height: 138px;
+    margin: 0 auto 35px auto;
+    transition: transform 0.4s ease;
+}
+
+.step:hover .shape-wrapper {
+    transform: scale(1.08);
+}
+
+.shape-back,
+.shape-front {
+    position: absolute;
+    inset: 0;
+}
+
+/* --- FIGURA DORADA DE ATRÁS --- */
+.shape-back {
+    background: linear-gradient(135deg, #c9a227 0%, #e8d48a 100%);
+}
+
+/* --- FIGURA OSCURA DE ADELANTE (MISMO TAMAÑO) --- */
+.shape-front {
+    position: absolute;
+    background: linear-gradient(145deg, #0c2738 0%, #07131C 100%);
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    transform: translate(20px, 20px); /* diagonal */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.step:hover .shape-front {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.icon-triangle2 {
+    width: 65px;
+    height: 75px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    pointer-events: none;
+    transition: transform 0.4s ease;
+}
+
+.step:hover .icon-triangle2 {
+    transform: scale(1.1);
+}
+
+.icon-circle2 {
+    width: 105px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background: transparent;
+    transition: transform 0.4s ease;
+}
+
+.step:hover .icon-circle2 {
+    transform: scale(1.1);
+}
+
+.icon-square2 {
+    width: 90px;
+    height: 90px;
+    transition: transform 0.4s ease;
+}
+
+.step:hover .icon-square2 {
+    transform: scale(1.1);
+}
+
+/* ============== FORMAS ============== */
+
+/* Triángulo */
+.triangle .shape-back,
+.triangle .shape-front {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Círculo */
+.circle .shape-back,
+.circle .shape-front {
+    border-radius: 50%;
+}
+
+/* Cuadrado */
+.square .shape-back,
+.square .shape-front {
+    border-radius: 8px;
+}
+
+.separator {
+    width: 103px;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a227 0%, #e8d48a 100%);
+    border-radius: 20px;
+    margin: 0 8px;
+    align-self: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .procedure-selection {
+        padding: 60px 20px;
+    }
+
+    .procedure-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .procedure-container {
+        flex-wrap: wrap;
+    }
+
+    .shape-wrapper {
+        width: 140px;
+        height: 140px;
+    }
+
+    .shape-front img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .procedure-container {
+        gap: 20px;
+    }
+}
