@@ -1,0 +1,189 @@
+/* Project Modal styles */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  animation: fadeUp 0.3s ease;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: color var(--transition-fast);
+  padding: 0.5rem;
+}
+
+.closeBtn:hover {
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 700px;
+}
+
+.carouselTrack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-md);
+}
+
+.navBtn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navBtn.prev {
+  left: 1rem;
+}
+
+.navBtn.next {
+  right: 1rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: var(--color-primary);
+  transform: scale(1.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .overlay {
+    padding: 1rem;
+  }
+
+  .modal {
+    padding: 1.5rem;
+  }
+
+  .carousel {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .navBtn {
+    padding: 0.75rem;
+  }
+
+  .navBtn.prev {
+    left: 0.5rem;
+  }
+
+  .navBtn.next {
+    right: 0.5rem;
+  }
+
+  .dots {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

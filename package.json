@@ -1,0 +1,29 @@
+{
+  "name": "muebles-jazmin-landing",
+  "version": "2.0.0",
+  "description": "Sitio web de Muebles Jazmín - Next.js App Router con TypeScript",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": ["nextjs", "react", "typescript", "furniture", "muebles"],
+  "author": "Muebles Jazmín",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^16.0.8",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.8",
+    "typescript": "^5.9.3"
+  }
+}

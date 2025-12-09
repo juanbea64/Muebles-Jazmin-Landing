@@ -1,0 +1,89 @@
+/* Header styles */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  background: rgba(11, 22, 30, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header.dark {
+  background: var(--color-secondary);
+}
+
+.headerInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo img {
+  display: block;
+}
+
+.menuToggle {
+  display: none;
+  padding: 0.5rem;
+  z-index: 101;
+  transition: opacity var(--transition-fast);
+}
+
+.menuToggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.desktopNav {
+  display: block;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headerInner {
+    padding: 1rem 1.5rem;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+}
