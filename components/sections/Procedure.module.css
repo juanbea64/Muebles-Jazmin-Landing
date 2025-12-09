@@ -1,0 +1,132 @@
+/* Procedure Section styles */
+
+.procedure {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.step {
+  flex: 1;
+  max-width: 350px;
+}
+
+.shapeWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+}
+
+.shapeBack,
+.shapeFront {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.shapeBack {
+  background: linear-gradient(135deg, #1a2732 0%, #0f1a22 100%);
+  z-index: 1;
+}
+
+.shapeFront {
+  z-index: 2;
+}
+
+.triangle .shapeBack,
+.triangle .shapeFront {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.circle .shapeBack,
+.circle .shapeFront {
+  border-radius: 50%;
+}
+
+.square .shapeBack,
+.square .shapeFront {
+  border-radius: var(--radius-md);
+}
+
+.step:hover .shapeBack {
+  background: linear-gradient(135deg, #d4af37 0%, #c99d2e 100%);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.separator {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .separator {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-primary),
+      transparent
+    );
+  }
+
+  .step {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .procedure {
+    padding: 3rem 1.5rem;
+  }
+
+  .shapeWrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
