@@ -1,0 +1,79 @@
+/* ContactForm styles */
+
+.section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.input.error,
+.textarea.error {
+  border-color: #ff4444;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  color: #ff4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .form {
+    gap: 1.25rem;
+  }
+
+  .input,
+  .textarea {
+    padding: 0.875rem;
+  }
+}
